@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}IAHM - International Association of Healing Ministries{% endblock %}</title>
+    <meta name="viewport"
+          content="initial-scale=1, minimum-scale=1, user-scalable=no, maximum-scale=1, width=device-width, minimal-ui">
+    {% block meta %}{% endblock %}
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}"/>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}"/>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/layout.css') }}" type="text/css"/>
+    {% endblock %}
+
+
+    {% block javascripts %}
+
+    {% endblock %}
+
+
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

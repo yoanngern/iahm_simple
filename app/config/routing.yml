@@ -1,0 +1,7 @@
+iahm_page:
+    resource: "@iahmPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,7 @@
+iahm_page_homepage:
+    path:     /
+    defaults: { _controller: iahmPageBundle:Default:home }
+
+iahm_page_events:
+    path:     /events/{event}
+    defaults: { _controller: iahmPageBundle:Default:events }

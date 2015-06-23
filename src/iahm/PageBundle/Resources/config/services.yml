@@ -1,0 +1,4 @@
+services:
+#    iahm_page.example:
+#        class: iahm\PageBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
