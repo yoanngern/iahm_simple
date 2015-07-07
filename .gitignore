@@ -1,8 +1,8 @@
 /web/bundles/
 /app/bootstrap*
+/app/cache/*
+/app/logs/*
 /vendor/
 /app/config/parameters.yml
 .idea/
-web/uploads/*
-web/cache/*
 web/sass/.sass-cache
