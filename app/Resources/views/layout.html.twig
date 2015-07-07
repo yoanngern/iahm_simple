@@ -5,6 +5,7 @@
     <title>{% block title %}IAHM - International Association of Healing Ministries{% endblock %}</title>
     <meta name="viewport"
           content="initial-scale=1, minimum-scale=1, user-scalable=no, maximum-scale=1, width=device-width, minimal-ui">
+
     {% block meta %}{% endblock %}
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}"/>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
@@ -19,17 +20,19 @@
 
     {% endblock %}
 
-
+    <!--<script type="text/javascript" src="/js/processed/mainNew.min.js"></script>-->
 </head>
 <body>
     <header>
         <section class="ruban">
-            <div id="logo">logo</div>
+            <div id="logoRight"></div>
+            <div id="logoLeft"></div>
             <nav class="main">
                 <ul>
-                    <li><a href="#" target="_blank">Events</a></li>
-                    <li><a href="#" target="_blank">Vision</a></li>
-                    <li><a href="#" target="_blank">Mission</a></li>
+                    <li class="current">Hi!</li>
+                    <li><a href="#"  target="_parent">Events</a></li>
+                    <li><a href="#" target="_parent">Vision</a></li>
+                    <li class="lastItem"><a href="#" target="_parent">Mission</a></li>
                 </ul>
             </nav>
         </section>
