@@ -8,7 +8,7 @@
 @font-face{font-family:"titillium05";src:url("../font/TitilliumText25L005.otf"),url("../font/TitilliumText25L005-webfont.eot"),url("../font/TitilliumText25L005-webfont.ttf")}
 
 h1{font-family:"Titillium Web", verdana;font-size:1.9em; text-transform:uppercase;margin:20px 0; font-weight:200 !important; /*margin:30px 50px 10px 50px;*/ margin:30px 0px 10px 0px;}
-h2{font-family:"Titillium Web", verdana;font-size:2.4em;text-transform:uppercase;margin:10px 0; font-weight:200 !important; line-height: 30px; color: white;}
+h2{font-family:"Titillium Web", verdana;font-size:2.0em;text-transform:uppercase;margin:10px 0; font-weight:200 !important; line-height: 30px; color: white;}
 h3{font-family:"Titillium Web", verdana;font-size:1.8em;margin:10px 0; font-weight:300 !important; /*margin:20px 50px 5px 50px;*/ margin:20px 0px 5px 0px; }
 h4{font-family:"Titillium Web", verdana;font-size:1.3em;text-transform:uppercase;margin:10px 0; font-weight:200 !important; line-height: 30px;}
 body{font-family:"Titillium Web", verdana;font-size:1.4em; font-weight:100 !important;	line-height:1.5em;
@@ -16,7 +16,7 @@ body{font-family:"Titillium Web", verdana;font-size:1.4em; font-weight:100 !impo
 
 article;h1,h2,h3,h4,p{margin: 0px; padding: 0px;}
 
-html, body{margin: 0px; padding: 0px;}
+html, body{margin: 0; padding: 0;}
 
 body {
 	background-color: #ececec;
@@ -25,20 +25,41 @@ body {
 
 
 /**/
-section.ruban, section.page, footer{
-	max-width: 1024px;
-	min-width: 250px;
+section#ruban, section.page, footer{
+	min-width: 100%; /* 1024px */
+	/*min-width: 250px;*/
 }
 
-section.ruban{
-	position: relative;	
+section#ruban{
+	position: fixed;	
 	top: 0px;
 	margin: 0px auto;
 	padding:0px;
 	/*width: 90%;*/
 	min-height: 80px;
-	background-color: white;
 	display: block;
+}
+section#social{
+	position: absolute;	
+	top: 57vh;
+	width: 100%;
+	margin: 0px auto;
+	height: 40px;
+	display: inline-block;
+	z-index: 99;
+	color: black;
+	text-align: center;
+
+}
+section#social ul{
+	margin:0;
+	padding: 0;
+}
+section#social li{
+	list-style: none;
+	display: inline-block;
+	padding: 10px;
+	background-color: blue;
 }
 section.page{
 	position: relative;
@@ -50,21 +71,26 @@ section.page{
 footer{
 	position: relative;
 	top: 0px;
-	/* width: 90%;*/
 	margin: 0px auto;
+	min-height: 150px;
 	display: block;
+	text-align: center;
+}
+
+#logoLeft,#logoRight,nav.main{
+	height: 80px;
 }
 #logoLeft{
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	height: 80px;
 	width: 180px;
 	display: block;
 	text-align: left;
 	z-index:20;
 	background: url(http://www.laguerison.org/templates/aimg/images/logo-aimg.png) no-repeat;
 	background-size: 100% auto;
+	margin: 0 auto;
 }
 #logoRight{display: none;}
 
@@ -72,14 +98,14 @@ nav.main{
 	position: relative;
 	top: 0px;
 	right: 0px;
-
-
 	color: #888;
 	display: block;
 	width: 100%;
 	text-align: right;
 	z-index:10;
 	text-transform:uppercase;
+	background-color: white;
+	margin: 0 auto;
 }
 
 nav.main ul{
@@ -108,21 +134,48 @@ nav.main  a{
 nav.main a:hover{
 	color : black;
 }
-section.eventsImage{
+section.cover{
+	background-color: rgb(240,240,240);
+	min-height:100%;
+	display: block;
+}
+section.coverImage{
 	background-color: rgb(250,250,250);
 	/*min-height:30vh;*/
-	height: auto;
+		height: 65vh;
+		width: 100%;
 	  background-attachment: local;
       background-repeat: no-repeat;
       background-position: bottom center;
 	  background-size: cover;
 	  background-image: url(https://ununsplash.imgix.net/photo-1429547584745-d8bec594c82e?q=75&fm=jpg&w=1080&fit=max&s=1870a82969024ba6816b271a49ca5876);
+	display: inline-block;
+	margin:0;
+	padding: 0;
 }
-section.events{
-	background-color: rgb(240,240,240);
-	min-height:100%;
+section.coverAction{
+	background-color: rgb(250,250,250);
+	/*min-height:30vh;*/
+	height: auto;
+	background-color: rgb(159,34,40);
+	background-color: rgb(250,236,0);
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 0 15px 0;
+	color: white,
+}
+section.IntroTextCover{
+	position: relative;
+	top:50%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 180%;
+	min-height: auto;
 	display: block;
+	margin: 0 auto;
+	padding:0;
 }
+
 section.visionImage{
 	background-color: rgb(240,240,240);
 	height:20%;
@@ -150,8 +203,8 @@ section.mission{
 	background-color: rgb(250,250,250);
 	min-height:100%;
 }
-section.intro  {
-	padding: 20% 5% 20% 5%;
+section.introText  {
+	/**/padding: 16% 5% 20% 5%;
 	text-align: center;
 	min-height: 100%;
 	top: 50%;
@@ -159,19 +212,10 @@ section.intro  {
 	line-height: 180%;
 	display: block;
 }
-article.event  {
-	padding: 20% 5% 20% 5%;
-	text-align: center;
-	min-height: 100%;
-	top: 50%;
-	vertical-align: middle;
-	line-height: 180%;
-	display: inline-block;
-}
 
 article {
-	padding: 80px 100px 80px 100px ; /* original size 20%  */
-	/*padding: 10% 20% 10% 20% ;*/ /* original size 20%  */
+	/*padding: 80px 100px 80px 100px ;  original size 20%  */
+	/**/padding: 10% 20% 10% 20% ; /* original size 20%  */
 	text-align: center;
 	min-height: 100%;
 	width: 650px;
@@ -188,8 +232,8 @@ p{
 
 
 @media screen and (max-width: 980px) {
-	section.ruban, section.page, footer{
-		max-width: 100%;
+	section#ruban, section.page, footer{
+		min-width: 100%;
 	}
 	article {
 	padding: 20% ;
@@ -205,7 +249,7 @@ p{
 
 
 @media screen and (max-width: 650px) {
-	section.ruban, section.page, footer{
+	section#ruban, section.page, footer{
 		max-width: 100%;
 	}
 	article {
@@ -217,7 +261,7 @@ p{
 		font-size: 0.8em;
 		line-height:1em;
 	}
-	section.ruban{
+	section#ruban{
 	position: relative;	
 	top: 0px;
 	min-height: 80px;
@@ -240,15 +284,15 @@ nav.main, nav.main ul, nav.main li, .current, nav.main a,.current a, nav.main ul
 		width: 180px;
 		display: block;
 		text-align: right;
-		z-index:10;
+		z-index:100;
 		background: url(http://www.laguerison.org/templates/aimg/images/logo-aimg.png) no-repeat;
 		background-size: 100% auto;
 	}
-	#logoLeft{display: none;}
+	#logoLeft{display: none; height: 80px;}
 
 	nav.main {
 		position: relative;
-		top : 7px;
+		top : 0px;
 		left: 0px;
 		min-height: 35px;
 		cursor: default;
@@ -265,13 +309,11 @@ nav.main, nav.main ul, nav.main li, .current, nav.main a,.current a, nav.main ul
 		border-radius: 5px;
 		display: block;
 	}
-
 	nav.main li {
 		display: none; /* hide all <li> items */
 		margin: 0;
 	list-style: none;
 	}
-
 	nav.main .current {
 	list-style: none;
 		display: block; /* show only current <li> item */
@@ -303,17 +345,15 @@ nav.main, nav.main ul, nav.main li, .current, nav.main a,.current a, nav.main ul
 	}
 	nav.main ul:hover li:hover{
 	}
-
 	nav.main ul:hover li.lastItem{
 		border-bottom: none;
 	}
 	nav.main ul:hover .current {
 
 	}
-
 }
 @media screen (min-width: 0px) and (max-width: 480px) {
-	section.ruban, section.page, footer, article{
+	section#ruban, section.page, footer, article{
 		min-width: 480px;
 		overflow: auto;
 	}
@@ -322,7 +362,5 @@ nav.main, nav.main ul, nav.main li, .current, nav.main a,.current a, nav.main ul
 		width:90%;
 		margin: auto;
 	}
-
-
 }
 
