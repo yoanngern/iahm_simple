@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}IAHM - International Association of Healing Ministries{% endblock %}</title>
+    <!---->
     <meta name="viewport"
-          content="initial-scale=1, minimum-scale=1, user-scalable=no, maximum-scale=1, width=device-width, minimal-ui">
+          content="initial-scale=1, width=device-width, minimum-scale=1, user-scalable=no, maximum-scale=1, width=device-width, minimal-ui">
+
+<!--
+    <meta name="viewport" content="height=device-height, initial-scale=1.0 maximum-scale=1.0">-->
 
     {% block meta %}{% endblock %}
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}"/>
@@ -17,35 +21,88 @@
 
 
     {% block javascripts %}
-
+    <!-- Add vUnit.js to the head to avoid FOUC -->
+    <!----><script type="text/javascript" src="{{ asset('vunit/vunit.js') }}"></script>
+        <script src="//use.typekit.net/dqq8egl.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
     {% endblock %}
 
-    <!--<script type="text/javascript" src="/js/processed/mainNew.min.js"></script>-->
+    <!-- Instantiate vUnit.js passing a CSSMap with properties you want to play with -->
+    <script type="text/javascript">
+        new vUnit({
+            CSSMap: {
+                '.vh': {
+                    property: 'height',
+                    reference: 'vh'
+                },
+                '.vw': {
+                    property: 'width',
+                    reference: 'vw'
+                },
+                '.vwfs': {
+                    property: 'font-size',
+                    reference: 'vw'
+                },
+                '.vhmt': {
+                    property: 'margin-top',
+                    reference: 'vh'
+                },
+                '.vhmb': {
+                    property: 'margin-bottom',
+                    reference: 'vh'
+                },
+                '.vminw': {
+                    property: 'width',
+                    reference: 'vmin'
+                },
+                '.vmaxw': {
+                    property: 'width',
+                    reference: 'vmax'
+                }
+            }
+        }).init();
+    </script>
 </head>
 <body>
     <header>
         <section id="ruban">
+            <!---->
             <div id="logoRight"></div>
             <div id="logoLeft"></div>
+            <!---->
             <nav class="main">
+                <!---->
                 <ul>
-                    <li class="current">Hi!</li>
-                    <li><a href="#"  target="_parent">Events</a></li>
-                    <li><a href="#" target="_parent">Vision</a></li>
-                    <li class="lastItem"><a href="#" target="_parent">Mission</a></li>
+                    <li class="current">&nbsp;</li>
+                    <li><a href="#presentation" target="_parent">Events</a></li>
+                    <li><a href="#vision" target="_parent">Vision</a></li>
+                    <li><a href="#mission" target="_parent">Mission</a></li>
+                    <li class="lastItem"><a href="#contact" target="_parent">Contact</a></li>
                 </ul>
+
             </nav>
+
         </section>
     </header>
 
-
+<!---->
     <section class="page">
 {% block body %}{% endblock %}
     </section>
 
 
 <footer>
-    Footer print
+<section class="contact">
+    <article><a name="contact"></a>
+        <h3>Contact</h3>
+            <p>
+                IAHM - International Association <br />of Healing Ministries<br />
+                Rte du Flon 28 - 1610 Oron-la-Ville - Switzerland<br /><br />
+                0041 21 907 44 44<br />
+             info@laguerison.org </p>
+        </p>
+    </article>
+</section>
 </footer>
 </body>
 </html>
