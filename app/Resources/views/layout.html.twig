@@ -4,7 +4,78 @@
     <meta charset="utf-8">
     <title>{% block title %}IAHM - International Association of Healing Ministries{% endblock %}</title>
     <!---->
-    <meta name="viewport"
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+ $( document ).on( 'keydown', function ( e ) {
+    if ( e.keyCode === 27 ) { // ESC
+        $("modalEvent1").hide();
+        $("overlayEvent1").hide();
+        $("modalEvent2").hide();
+        $("overlayEvent2").hide();
+        $("modalEvent3").hide();
+        $("overlayEvent3").hide();
+    }
+});
+   $(document).ready(function(){
+        $("modalEvent1").hide();
+        $("overlayEvent1").hide();
+
+        $("#hideEvent1").click(function(){
+            $("modalEvent1").hide();
+            $("overlayEvent1").hide();
+        });
+        $("#showEvent1").click(function(){
+            $("modalEvent1").show();
+            $("overlayEvent1").show();
+        });
+    });
+
+    $(document).ready(function(){
+        $("modalEvent2").hide();
+        $("overlayEvent2").hide();
+
+        $("#hideEvent2").click(function(){
+            $("modalEvent2").hide();
+            $("overlayEvent2").hide();
+        });
+        $("#showEvent2").click(function(){
+            $("modalEvent2").show();
+            $("overlayEvent2").show();
+        });
+    });
+
+    $(document).ready(function(){
+        $("modalEvent3").hide();
+        $("overlayEvent3").hide();
+
+        $("#hideEvent3").click(function(){
+            $("modalEvent3").hide();
+            $("overlayEvent3").hide();
+        });
+        $("#showEvent3").click(function(){
+            $("modalEvent3").show();
+            $("overlayEvent3").show();
+        });
+    });
+    </script>
+    <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+   <meta name="viewport"
           content="initial-scale=1, width=device-width, minimum-scale=1, user-scalable=no, maximum-scale=1, width=device-width, minimal-ui">
 
 <!--
@@ -74,7 +145,8 @@
                 <!---->
                 <ul>
                     <li class="current">&nbsp;</li>
-                    <li><a href="#presentation" target="_parent">Events</a></li>
+                    <li><a href="#events" target="_parent">Events</a></li>
+                    <li><a href="#presentation" target="_parent">Presentation</a></li>
                     <li><a href="#vision" target="_parent">Vision</a></li>
                     <li><a href="#mission" target="_parent">Mission</a></li>
                     <li class="lastItem"><a href="#contact" target="_parent">Contact</a></li>

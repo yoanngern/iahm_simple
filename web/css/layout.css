@@ -60,13 +60,14 @@ font-weight: 400;
 }
 
 
-
 h1{font-family:"Titillium-Light", verdana;font-size:1.9em; text-transform:uppercase;margin:20px 0; font-weight:normal !important; /*margin:30px 50px 10px 50px;*/ margin:30px 0px 10px 0px;}
 h2{font-family:"Titillium-Light", verdana;font-size:2.0em;text-transform:uppercase; margin:10px 0; font-weight:normal !important; line-height: 30px; color: white;}
 h3{font-family:"Titillium-Regular", verdana;font-size:1.8em;margin:10px 0; font-weight:300 !important; /*margin:20px 50px 5px 50px;*/ margin:20px 0px 5px 0px; }
 h4{font-family:"Titillium-Light", verdana;font-size:1.3em;text-transform:uppercase;margin:10px 0; font-weight:normal !important; line-height: 30px;}
 
-
+.splitText{
+display: inline-block;
+}
 
 body{font-family:"Titillium-Thin", verdana;font-size:1.4em; font-weight:100 !important;	line-height:1.5em;
 }
@@ -74,20 +75,23 @@ p{
 	margin: 2em 0 0 0;
 	line-height: 150%;
 }
-.button{
-	border: 2px red solid;
+button{
+	background-color: inherit;
+	cursor: pointer;
+	border: 1px red solid;
 	color: red;
 	text-decoration: none;
 	border-radius: 5px;
 	font-family:"Titillium-Medium";
 	text-transform: uppercase;
 	padding: 9px 10px 5px 10px;
-	transition: all 1s ease-out; 
+	transition: all 1s ease-out;
+	margin-bottom: 5%;
 
 }
-.button:hover{
+button:hover{
 	color: black;
-	border: 2px black solid;
+	border: 1px black solid;
 }
 .red{
 	border-color: red;
@@ -97,11 +101,25 @@ p{
 	border-color: white;
 	color: white;
 }
+.hightlight{
+	border: 2px red solid;
+	font-family:"Titillium-Medium";
+	font-size: 0.9em;
+}
+.hightlight:hover{
+	border: 2px black solid;
+	font-family:"Titillium-Medium";
+	font-size: 0.9em;
+}
 
 article;h1,h2,h3,h4,p{margin: 0px; padding: 0px;}
 
 html, body, section{ margin: 0px; padding: 0px; width: 100%;}
 
+html, body{
+	min-height: 100%;
+  	scroll-behavior: smooth;
+  }
 body {
 	background-color: #ececec;
 	color: #222;
@@ -237,6 +255,11 @@ section.cover{
 	background-color: rgb(240,240,240);
 	min-height:100%;
 	display: block;
+	background: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom center;
+	background-size: cover;
+	background-image: url(../images/background-1.jpg);
 }
 section.coverImage{
 	position: relative;
@@ -287,7 +310,7 @@ section#coverVerse{
 	font-size:0.9em;
 	text-transform: none;
 	margin:20px 0;
-	margin:30px 0px 10px 0px;*/
+	margin:30px 0px 10px 0px;
 }
 section#coverVerse{
 	position: absolute;
@@ -362,9 +385,10 @@ section.events{
 */
 section.events{
 	/*background-color: rgb(255,255,255);*/
-	height: 60%;
+	min-height: 60%;
 	text-align: center;
 	padding: 5% 0 0% 0;
+	/*background-color: rgb(40,40,40);*/
 }
 section.eventItem1col{
 	/**/margin: 20px 0% 0px 0%;
@@ -381,15 +405,29 @@ section.eventItem1col{
 }
 
 section.eventItem3col{
+	position: relative;
 	/**/margin: 20px 1.3% 20px 1.3%;
 	width:30%;
 	display: inline-block;
+	vertical-align: top;
+	top: 0px;
 }
 section.eventThumb{
+    position: relative;
 	height: 150px;
 	width:100%;
 	display: block;
 	background-color: rgb(230,230,230);
+	text-align: left;
+}
+#eventThumbText{
+    position: absolute;
+    left: 10px;
+	bottom: 5px;
+	margin: 0 auto;
+	font-family: titillium-Medium;
+	color: white;
+	line-height: 1.1em;
 }
 .thumb1{
 	  background-attachment: scroll;
@@ -418,7 +456,7 @@ section.eventText{
 	display: block;
 	margin: 5% 0 0% 0;
 }
-.eventTitle{font-family: titillium-Bold; padding: 7px 0 0 0; margin:0; display: inline-block;}
+.eventTitle{font-size: 0.7em; line-height: 1.3em; padding: 7px 0 0 0; margin:0; display: inline-block;}
 section.visionImage{
 	background-color: rgb(240,240,240);
 	height:20%;
@@ -434,6 +472,11 @@ section.vision{
 	height:50%;
 	display: block;
 	width:100%;
+	background: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom center;
+	background-size: cover;
+	background-image: url(../images/background-1.jpg);
 }
 section.missionImage{
 	background-color: rgb(240,240,240);
@@ -447,6 +490,11 @@ section.missionImage{
 section.mission{
 	background-color: rgb(250,250,250);
 	min-height:100%;
+	background: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom center;
+	background-size: cover;
+	background-image: url(../images/background-1.jpg);
 }
 section.contactImage{
 	background-color: rgb(240,240,240);
@@ -484,6 +532,67 @@ article {
 	display: block;
 	margin:auto;
 }
+
+/* */
+
+/* Overlay config */
+
+/* */
+/*
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Federo);
+*/
+/*html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    padding: 30px;
+    font-family: 'Open Sans', sans-serif;
+    background: #f1c40f;
+    color: #fff;
+}*/
+
+/* overlay styles, all needed */
+
+overlayEvent1, overlayEvent2, overlayEvent3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 901;
+  background-color: rgba(0,0,0,0.5);
+}
+modalEvent1, modalEvent2, modalEvent3 {
+    min-width: 80%;
+    min-height: 100%;
+    line-height: 200px;
+    position: fixed;
+    top: 0; 
+    left: 10%;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #f1c40f;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 902; /* 1px higher than the overlay layer */
+}
+#hideEvent1, #hideEvent2, #hideEvent3{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.content {
+    margin: 30px;
+}
+/*
+h1 {
+    font-family: 'Federo', sans-serif;
+}*/
 
 
 /*

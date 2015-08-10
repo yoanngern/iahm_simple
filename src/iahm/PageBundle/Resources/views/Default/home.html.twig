@@ -1,11 +1,30 @@
 {% extends "::layout.html.twig" %}
 
 {% block body %}
+<!--
+<div class="overlay"></div>
+<div class="modal">I'm the modal window!<button id="hide">Hide</button></div>
+-->
+<overlayEvent1></overlayEvent1>
+<modalEvent1>
+	<div id="buttonClose"><button id="hideEvent1">Hide</button></div>
+	1 I'm the modal window!
+</modalEvent1>
+<overlayEvent2></overlayEvent2>
+<modalEvent2>
+	<div id="buttonClose"><button id="hideEvent2">Hide</button></div>
+	2 I'm the modal window!
+</modalEvent2>
+<overlayEvent3></overlayEvent3>
+<modalEvent3>
+	<div id="buttonClose"><button id="hideEvent3">Hide</button></div>
+	3 I'm the modal window!
+</modalEvent3>
 
 <section class="coverImage">
 	<section id="coverVerse">
 		<!--<img src="imagesd/iahm-heart-white.png" height="250" />-->
-			<!--<h2></h2>-->He sent them out to proclaim the kingdom of God and to heal the sick. Luke 9.2
+			<!--<h2></h2>--><div class="splitText">He sent them out to proclaim the kingdom&nbsp;</div><div>of God and to heal the sick. Luke 9.2</div>
 	</section>
 	<section id="IntroTextCover">
 		<!--<img src="imagesd/iahm-heart-white.png" height="250" />-->
@@ -26,23 +45,29 @@
 -->
 
 <!---->
-<section class="events">
+<section class="events"><a name="events"></a>
 		<h3>Conferences & Events</h3>
 		<p>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb1">&nbsp;</section>
-				<section class="eventText"><span class="eventTitle">Stuttgart conference</span><br />les détails</section>
+				<section class="eventThumb thumb1"><div id="eventThumbText">Stuttgart&nbsp;<br>Germany</div></section>
+				<section class="eventText"><span class="eventTitle">International Healing Conference<br />30 oct, - 2 nov, 2015</span><br />
+					<button id="showEvent1">Learn more</button>
+				</section>
 		</section>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb2">&nbsp;</section>
-				<section class="eventText">Minneapolis<br />les détails</section>
+				<section class="eventThumb thumb2">Minneapolis&nbsp;</section>
+				<section class="eventText"><span class="eventTitle">Dates</span><br />
+					<button id="showEvent2">Learn more</button>
+				</section>
 			</section>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb3">&nbsp;</section>
-				<section class="eventText">Le titre de l'event<br />les détails</section>
+				<section class="eventThumb thumb3">Nom ville&nbsp;</section>
+				<section class="eventText"><span class="eventTitle">Dates</span><br />
+					<button id="showEvent3">Learn more</button>
+				</section>
 			</section>
 		</p>
-		<p><a class="button hightlight" href="#">Click here to see more events</a></p>
+		<p><button class="hightlight" href="#">Click here to see more events</button></p>
 </section>
 
 
@@ -63,8 +88,8 @@ Johannes Hartl (DE) / Mattheus van der Steen (NL) / Andreas Hermann (DE)<br />Ma
 -->
 
 
-<section class="cover">
-	<article><a name="presentation"></a>
+<section class="cover"><a name="presentation"></a>
+	<article>
 		<h3>Who are we ?</h3>
 		<p>
 We are an international association uniting people called to work to promote healing ministries. The IAHM organisation offers encouragement, a sense of responsibility, accountability and a strategy that we desperately need to grow healing in the Church today.
@@ -74,8 +99,8 @@ We are an international association uniting people called to work to promote hea
 <section class="visionImage">
 	<section class="introText"><h2>OUR VISION</h2></section>
 </section>
-<section class="vision">
-	<article><a name="vision"></a>
+<section class="vision"><a name="vision"></a>
+	<article>
 		<h3>Our vision</h3>
 		<p>
 			Our desire is to see a greater manifestation of healing anointing and supernatural be imparted in every ministry and community. More and more, the river of the presence of God grows and we see a new outpouring of the Holy Spirit emerge, showing itself through signs, wonders, healings and miracles. We notice that things we had been longing for are happening now: lames are walking, blinds receive their sight, cancerous and AIDS sufferers are healed! We believe that we are going to see a wider release of these manifestations as we unite all of those who are already moving with healing anointing.
@@ -86,8 +111,8 @@ We are an international association uniting people called to work to promote hea
 <section class="missionImage">
 	<section class="introText"><h2>Uniting - Bringing - Restoring</h2></section>
 </section>
-<section class="mission">
-	<article><a name="mission"></a>
+<section class="mission"><a name="mission"></a>
+	<article>
 		<h3>Our mission</h3>
 		<p>
 			<strong>Uniting</strong> healing ministries through an international network in order to support one another and offer a greater visibility and credibility.</p>
