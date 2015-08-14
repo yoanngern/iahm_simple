@@ -1,6 +1,29 @@
 {% extends "::layout.html.twig" %}
 
 {% block body %}
+    <header>
+        <section id="ruban">
+            <!----><!--
+            <div id="logoRight"></div>
+            <div id="logoLeft"></div>
+            -->
+            <div id="logo"></div>
+            <nav class="main">
+                <!---->
+                <ul>
+                    <li class="current">&nbsp;</li>
+                    <li><a href="#events" target="_parent">Events</a></li>
+                    <li><a href="#presentation" target="_parent">Presentation</a></li>
+                    <li><a href="#vision" target="_parent">Vision</a></li>
+                    <li><a href="#mission" target="_parent">Mission</a></li>
+                    <li class="lastItem"><a href="#contact" target="_parent">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </section>
+    </header>
+
 <!--
 <div class="overlay"></div>
 <div class="modal">I'm the modal window!<button id="hide">Hide</button></div>
@@ -50,25 +73,25 @@
 		<p>
 			<section class="eventItem3col">
 				<section class="eventThumb thumb1"><div id="eventThumbText">Stuttgart&nbsp;<br>Germany</div></section>
-				<section class="eventText"><span class="eventTitle">International Healing Conference<br />30 oct, - 2 nov, 2015</span><br />
-					<button id="showEvent1">Learn more</button>
-					<a href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
+				<section class="eventText"><span class="eventTitle">Supernatural Conference<br />30 oct, - 2 nov, 2015</span><br />
+					<!--<button id="showEvent1">Learn more</button>-->
+					<a class="button" href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
 				</section>
 		</section>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb2">Minneapolis&nbsp;</section>
-				<section class="eventText"><span class="eventTitle">Dates</span><br />
-					<button id="showEvent2">Learn more</button>
+				<section class="eventThumb thumb2"><div id="eventThumbText">Minneapolis&nbsp;<br />United States</div></section>
+				<section class="eventText"><span class="eventTitle">International Healing Conference<br />30 oct, - 2 nov, 2015</span><br />
+					<a class="button" href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
 				</section>
 			</section>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb3">Nom ville&nbsp;</section>
-				<section class="eventText"><span class="eventTitle">Dates</span><br />
-					<button id="showEvent3">Learn more</button>
+				<section class="eventThumb thumb3"><div id="eventThumbText">Nom ville&nbsp;</div></section>
+				<section class="eventText"><span class="eventTitle">International Healing Conference<br />30 oct, - 2 nov, 2015</span><br />
+					<a class="button" href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
 				</section>
 			</section>
 		</p>
-		<p><button class="hightlight" href="#">Click here to see more events</button></p>
+		<!--<p><a class="button hightlight" href="#">Click here to see more events</a></p>-->
 </section>
 
 
@@ -98,7 +121,7 @@ We are an international association uniting people called to work to promote hea
 	</article>
 </section>
 <section class="visionImage">
-	<section class="introText"><h2>OUR VISION</h2></section>
+	<section class="introText"><h2><!--OUR VISION--></h2></section>
 </section>
 <section class="vision"><a name="vision"></a>
 	<article>
@@ -110,7 +133,7 @@ We are an international association uniting people called to work to promote hea
 	</article>
 </section>
 <section class="missionImage">
-	<section class="introText"><h2>Uniting - Bringing - Restoring</h2></section>
+	<section class="introText"><!--<h2>Uniting - Bringing - Restoring</h2>--></section>
 </section>
 <section class="mission"><a name="mission"></a>
 	<article>

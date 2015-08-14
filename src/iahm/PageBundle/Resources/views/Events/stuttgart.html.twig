@@ -1,6 +1,19 @@
 {% extends "iahmPageBundle::events.html.twig" %}
 
 {% block event %}
-<h1>Stuttgart</h1>
-
+<section class="pageEvent">
+	<!--<h5>Stuttgart, Germany</h5>-->
+	<div class="pageEventCover"><a class="buttonBack" href="{{ path('iahm_page_homepage') }}">< Back to home</a></div>
+	<div class="pageEventBloc">
+		<h5>Supernatural Conference</h5>
+		<ul class="grid">
+			<li class="gridList"><div class="detailLabelEvent">Date</div><div class="detailTextEvent">30 september - 2 october 2015 conference<br />3 october 2015 HolySpiritNight</div></li>
+			<li class="gridList"><div class="detailLabelEvent">Address</div><div class="detailTextEvent">GOSPEL FORUM, Stuttgart, GERMANY</div></li>
+			<li class="gridList"><div class="detailLabelEvent">Speakers</div><div class="detailTextEvent">
+Bill Johnson (USA), <br />Heidi Baker (MZ), <br />Peter Wenz (DE), <br />Jean-Luc Trachsel (CH), <br />Johannes Hartl (DE), <br />Mattheus van der Steen (NL),<br /> Andreas Hermann (DE),<br /> Markus Wenz (DE),<br /> Ainsi que d'autres
+			</div></li>
+			<li class="gridList"><div class="detailLabelEvent">Subscription</div><div class="detailTextEvent"><a href="http://supernatural.holyspiritnight.de/" target="_blank">Offical Website</a></div></li>
+		</ul>
+	</div>
+</section>
 {% endblock %}
