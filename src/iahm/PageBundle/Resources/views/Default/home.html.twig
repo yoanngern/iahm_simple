@@ -2,12 +2,12 @@
 
 {% block body %}
     <header>
+        <section id="logo"></section>
         <section id="ruban">
             <!----><!--
             <div id="logoRight"></div>
             <div id="logoLeft"></div>
             -->
-            <div id="logo"></div>
             <nav class="main">
                 <!---->
                 <ul>
@@ -28,7 +28,7 @@
 <div class="overlay"></div>
 <div class="modal">I'm the modal window!<button id="hide">Hide</button></div>
 -->
-<overlayEvent1></overlayEvent1>
+<!--<overlayEvent1></overlayEvent1>
 <modalEvent1>
 	<div id="buttonClose"><button id="hideEvent1">Hide</button></div>
 	1 I'm the modal window!
@@ -43,7 +43,7 @@
 	<div id="buttonClose"><button id="hideEvent3">Hide</button></div>
 	3 I'm the modal window!
 </modalEvent3>
-
+-->
 <section class="coverImage">
 	<section id="coverVerse">
 		<!--<img src="imagesd/iahm-heart-white.png" height="250" />-->
@@ -72,22 +72,20 @@
 		<h3>Conferences & Events</h3>
 		<p>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb1"><div id="eventThumbText">Stuttgart&nbsp;<br>Germany</div></section>
+				<section class="eventThumb thumb1 "><div id="eventThumbText">Stuttgart&nbsp;<br>Germany</div></section>
 				<section class="eventText"><span class="eventTitle">Supernatural Conference<br />30 oct, - 2 nov, 2015</span><br />
 					<!--<button id="showEvent1">Learn more</button>-->
 					<a class="button" href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
 				</section>
 		</section>
 			<section class="eventItem3col">
-				<section class="eventThumb thumb2"><div id="eventThumbText">Minneapolis&nbsp;<br />United States</div></section>
-				<section class="eventText"><span class="eventTitle">International Healing Conference<br />30 oct, - 2 nov, 2015</span><br />
-					<a class="button" href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
+				<section class="eventThumb thumb2 "><div id="eventThumbText">Minneapolis&nbsp;<br />United States</div></section>
+				<section class="eventText"><span class="eventTitle">International Healing Conference<br />14 oct, - 17 oct, 2015</span><br />
+					<a class="button" href="{{ path('iahm_page_events', {'event': 'minneapolis'}) }}">Learn more</a>
 				</section>
 			</section>
-			<section class="eventItem3col">
-				<section class="eventThumb thumb3"><div id="eventThumbText">Nom ville&nbsp;</div></section>
-				<section class="eventText"><span class="eventTitle">International Healing Conference<br />30 oct, - 2 nov, 2015</span><br />
-					<a class="button" href="{{ path('iahm_page_events', {'event': 'stuttgart'}) }}">Learn more</a>
+			<section class="eventItem3colPlus">
+				<section class="eventPlus">Events in french speaking countries</div>
 				</section>
 			</section>
 		</p>

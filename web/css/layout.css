@@ -64,7 +64,7 @@ h1{font-family:"Titillium-Light", verdana;font-size:1.9em; text-transform:upperc
 h2{font-family:"Titillium-Light", verdana;font-size:2.0em;text-transform:uppercase; margin:10px 0; font-weight:normal !important; line-height: 30px; color: white;}
 h3{font-family:"Titillium-Regular", verdana;font-size:1.8em; font-weight:300 !important; /*margin:20px 50px 5px 50px;*/ margin:5px 0px 5px 0px; }
 h4{font-family:"Titillium-Light", verdana;font-size:1.3em;text-transform:uppercase;margin:10px 0; font-weight:normal !important; line-height: 30px;}
-
+b{font-family: 'Titillium-Medium';}
 .splitText{
 display: inline-block;
 }
@@ -136,23 +136,62 @@ section#ruban{
 	margin: 0px auto;
 	padding:0px;
 	/*width: 90%;*/
+	/*height: 80px;*/
 	height: 80px;
 	display: block;
 	z-index: 20;
-}
+	background-color: white;
+}/*
 #logo{
 	position: fixed;
 	top: 0px;
 	left: 30px;
 	margin: 0px auto;
 	padding:0px;
-	/*width: 90%;*/
 	height: 120px;
 	width: 120px;
 	display: block;
 	z-index: 9000;
 	background-color: white;
+}*/
+
+section#logo{
+	position: fixed;
+	top: 0px;
+	left: 30px;
+	margin: 5px auto;
+	padding:0px;
+	/*width: 90%;*/
+		height: 56px;
+		width: 180px;
+	display: inline-block;
+	z-index: 9900;
+	background: no-repeat url(../images/logo-iahm.png) scroll center center;
+	background-size: 180px 50px;
+	background-attachment: ;
 }
+ @media screen and (max-width: 680px) {
+	 section#logo{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		margin: auto;
+		padding:0px;
+		/*width: 90%;*/
+		height: 70px;
+		width: 100%;
+		z-index: 9900;
+		/**/ background-color: white;
+		display: inline-block;
+		background-attachment: scroll;
+		background: no-repeat;
+		background-size: 180px 56px;
+		background-image: url(../images/logo-iahm.png);
+		background-position: center center;
+	}
+}
+
+
 section.social ul{
 	margin:0;
 	padding: 0;
@@ -225,7 +264,7 @@ footer{
 #logoRight{display: none;}
 
 nav.main{
-height: 40px;	
+height: 60px; /* 40 */ 	
 	position: fixed;
 	top: 0px;
 	right: 0px;
@@ -430,14 +469,39 @@ section.eventItem3col{
 	top: 0px;
 	background-color: white;
 }
+section.eventItem3colPlus{
+	position: relative;
+	/**/margin: 20px 1.3% 20px 1.3%;
+	width:30%;
+	display: inline-block;
+	vertical-align: middle;
+	top: 0px;
+	background-color: white;
+}
 section.eventThumb{
     position: relative;
 	height: 150px;
 	width:100%;
-	display: block;
+	display: inline-block;
 	background-color: rgb(230,230,230);
 	text-align: left;
 }
+section.eventPlus{
+    position: relative;
+	height: 280px;
+	width:100%;
+	background-color: red;
+	color: white;
+	display: inline-block;
+	text-align: left;
+	margin: auto;
+}
+section.eventPlus:hover{
+	background-color: white;
+	color: red;
+	border:solid 1px red;
+}
+
 #eventThumbText{
     position: absolute;
     left: 10px;
@@ -449,25 +513,40 @@ section.eventThumb{
 }
 .thumb1{
 	  background-attachment: scroll;
-	  background-position: bottom center;
+	  background-position: center center;
 	  background: no-repeat;
 	  background-size: cover;
-	  background-image: url(https://ununsplash.imgix.net/photo-1429547584745-d8bec594c82e?q=75&fm=jpg&w=1080&fit=max&s=1870a82969024ba6816b271a49ca5876);
+	  background-image: url(../images/supernatural-banner.jpg);
 }
 .thumb2{
 	  background-attachment: scroll;
-	  background-position: bottom center;
+	  background-position: center center;
 	  background: no-repeat;
 	  background-size: cover;
-	  background-image: url(https://ununsplash.imgix.net/photo-1429547584745-d8bec594c82e?q=75&fm=jpg&w=1080&fit=max&s=1870a82969024ba6816b271a49ca5876);
+	  background-image: url(../images/minneapolis.jpg);
 }
 .thumb3{
 	  background-attachment: scroll;
-	  background-position: bottom center;
+	  background-position: center center;
 	  background: no-repeat;
 	  background-size: cover;
 	  background-image: url(https://ununsplash.imgix.net/photo-1429547584745-d8bec594c82e?q=75&fm=jpg&w=1080&fit=max&s=1870a82969024ba6816b271a49ca5876);
 }
+.brightness {
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+}
+.brightness:hover {
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        -moz-filter: brightness(100%);
+        -o-filter: brightness(100%);
+        -ms-filter: brightness(100%);
+}
+
 section.eventText{
 	height: auto;
 	width:100%;
@@ -485,7 +564,7 @@ section.visionImage{
 	  background-position: middle center;
 	  background-size: cover;
 	  /*background-image: url(https://ununsplash.imgix.net/photo-1429547584745-d8bec594c82e?q=75&fm=jpg&w=1080&fit=max&s=1870a82969024ba6816b271a49ca5876);*/
-	  background-image: url(../images/covers/stock-photo-61924812-large-crowd-of-people.jpg);
+	  background-image: url(../images/covers/crowd-of-people.jpg);
 	  /*background-image: url(../images/enterprise-tour-2.jpg);*/
 
 }
@@ -507,7 +586,7 @@ section.missionImage{
 	  background-attachment: fixed;
 	  background-position: bottom center;
 	  background-size: cover;
-	  background-image: url(../images/covers/stock-photo-65159793-people-having-fun-at-concert-.jpg);
+	  background-image: url(../images/covers/people-having-fun.jpg);
 
 }
 section.mission{
@@ -753,7 +832,7 @@ a.buttonBack{
 	section#ruban{
 		position: relative;	
 		top: 0px;
-		height: auto;
+		height: 70px;
 		/*min-height: 80px;*/
 		display: block;
 		margin: 0px auto;
@@ -801,6 +880,14 @@ a.buttonBack{
 	li.gridList{
 		margin: 10px 0 0 0;
 	}
+nav.main  li {
+	display: inline-block;
+	/*border-right: black 1px solid;*/
+	/*padding: 7px 22px 7px 22px;*/
+	padding: 5px 4px 5px 4px;
+	font-size: 0.9em;
+	list-style: none;
+	}
 
 }
 /*
@@ -812,27 +899,33 @@ a.buttonBack{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
 	section#ruban, section.page, footer{
 		min-width:480px;
 		width: 100%;
 	}
 	article {
-		padding: 5% 5% 10% 5%;
+		padding: 5% 5% 5% 5%;
 		width:90%;
 		margin:0 auto;
 	}
 	body {
-		font-size: 0.8em;
+		/*font-size: 0.8em;*/
+		font-size: 1em;
 		line-height:1em;
+		margin-top: 70px;
 	}
 	section#ruban{
-	position: absolute;	
-	top: 0px;
-	/*min-height: 80px;*/
-	display: block;
-	margin: 0px auto;
-	padding:0px;
+		position: absolute;	
+		top: 0px;
+		height: 0px;
+		/*min-height: 80px;*/
+		display: block;
+		margin: 0px auto;
+		padding:0px;
+	}
+	section#logo{
+		background-color: white;
 	}
 	section.coverImage{
 	position: relative;
@@ -855,7 +948,7 @@ a.buttonBack{
 	nav.main{	
 		height: 25px;
 		position: fixed;
-		top: 0px;
+		top: 70px;
 		right: 0px;
 		color: #888;
 		display: block;
@@ -870,7 +963,7 @@ nav.main  li {
 	display: inline-block;
 	/*border-right: black 1px solid;*/
 	/*padding: 7px 22px 7px 22px;*/
-	padding: 5px 2% 5px 2%;
+	padding: 5px 3px 5px 3px;
 	list-style: none;
 	}
 section.cover{
@@ -895,6 +988,7 @@ section.cover{
 		width:92%;
 		height: 100%;
 		display: inline-block;
+		font-size: 1.4em;
 		line-height: 1.6em;
 	}
 	section.eventThumb{
@@ -922,7 +1016,7 @@ section.cover{
 		background-image: url(../images/iahm-heart-white.png);
 	}
 	section.social li{
-		margin: 0 10px 0 10px;
+		margin: 5px 10px 0 10px;
 		height: 30px;
 		width: 30px;
 	    transition: all 1s ease-out; 
@@ -949,6 +1043,10 @@ section.cover{
 		  background-size:100%;
 		  background-image: url(../images/supernatural-banner.jpg);
 	}
+	section#coverVerse{
+	font-size:1em;
+}
+
 }
 
 @media screen and (max-width: 480px) {
