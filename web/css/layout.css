@@ -230,6 +230,9 @@ section.social li:hover, a:hover{
 		background: url(../images/youtube.png) no-repeat;
 		background-size: 100% 100%;
 	}
+section.socialFooter{
+	padding: 10px 0 50px 0;
+}
 section.page{
 	position: relative;
 	top: 0px;
@@ -290,7 +293,7 @@ nav.main  li {
 	list-style: none;
 	}
 nav.main  li:hover {
-	/*border-top: red 2px solid;*/
+	/*border-top: #9e1e24 2px solid;*/
 	/*padding: 5px 22px 5px 22px;*/
 }
 nav.main .current{
@@ -303,7 +306,7 @@ nav.main  a{
 	text-decoration : none;
 }
 nav.main a:hover{
-	color : red;
+	color : #9e1e24;
 }
 section.cover{
 	position: relative;
@@ -487,19 +490,29 @@ section.eventThumb{
 	text-align: left;
 }
 section.eventPlus{
-    position: relative;
+    /*position: relative;*/
 	height: 280px;
 	width:100%;
-	background-color: red;
+	background-color: #9e1e24;
 	color: white;
 	display: inline-block;
 	text-align: left;
-	margin: auto;
+	vertical-align: middle;
+	transition: all 0.5s ease-out;
+	border:solid 1px #9e1e24;
+	cursor: pointer;
+}
+div.eventPlusText{
+	position: relative;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	height: auto;
 }
 section.eventPlus:hover{
 	background-color: white;
 	color: red;
-	border:solid 1px red;
+	border:solid 1px #9e1e24;
 }
 
 #eventThumbText{
@@ -523,7 +536,7 @@ section.eventPlus:hover{
 	  background-position: center center;
 	  background: no-repeat;
 	  background-size: cover;
-	  background-image: url(../images/minneapolis.jpg);
+	  background-image: url(../images/minneapolis-banner.jpg);
 }
 .thumb3{
 	  background-attachment: scroll;
@@ -710,7 +723,7 @@ section.pageEvent{
 	vertical-align: top;
 	line-height: 1.6em;
 }
-.pageEventCover{
+.pageEventCoverSupernatural{
 	display: inline-block;
 	height: 300px;
 	min-width: 400px;
@@ -727,6 +740,24 @@ section.pageEvent{
 
 	  background-image: url(../images/supernatural-banner.jpg);
 }
+.pageEventCoverMinneapolis{
+	display: inline-block;
+	height: 300px;
+	min-width: 400px;
+	/*width: 20%;*/
+	width: 100%;
+	background-color: green;
+	vertical-align: top;
+	margin: 0 0 5% 0;
+	  background: no-repeat;
+	  background-attachment: fixed;
+	  background-position: top center;
+	  /*background-size:973px 300px;*/
+	  background-size:cover;
+
+	  background-image: url(../images/minneapolis-banner.jpg);
+}
+
  @media screen and (max-width: 650px) {.pageEventCover{ display: inline-block; height: 250px; background-size:100%;}}
 
 /* @media screen and (max-width: 980px) {.pageEventCover{ display: inline-block; height: 280px; background-size:100%;}}
@@ -776,10 +807,16 @@ a.buttonBack{
 	text-decoration: none;
 }
 
-
-
-
-
+a.eventbutton{
+	height: 100%;
+	width: 100%;
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+a.eventbutton:hover{
+	color: red;
+}
 /* Chapitre adaptation part rapport au format d'affichage (responsive)  */
 
 
@@ -913,8 +950,11 @@ nav.main  li {
 		/*font-size: 0.8em;*/
 		font-size: 1em;
 		line-height:1em;
+	}
+	section.coverImage{
 		margin-top: 70px;
 	}
+
 	section#ruban{
 		position: absolute;	
 		top: 0px;
@@ -959,19 +999,19 @@ nav.main  li {
 		background-color: white;
 		margin: 0 auto;
 	}
-nav.main  li {
+	nav.main  li {
 	display: inline-block;
 	/*border-right: black 1px solid;*/
 	/*padding: 7px 22px 7px 22px;*/
 	padding: 5px 3px 5px 3px;
 	list-style: none;
 	}
-section.cover{
-	position: relative;
-	background-color: rgb(240,240,240);
-	min-height:100%;
-	display: block;
-}
+	section.cover{
+		position: relative;
+		background-color: rgb(240,240,240);
+		min-height:100%;
+		display: block;
+	}
 	section.eventItem{
 		margin: 5%;
 		height: 250px;
@@ -986,7 +1026,7 @@ section.cover{
 	section.eventItem3col{
 		/**/margin: 20px 2% 20px 2%;
 		width:92%;
-		height: 100%;
+		height: auto;
 		display: inline-block;
 		font-size: 1.4em;
 		line-height: 1.6em;
@@ -1027,7 +1067,7 @@ section.cover{
 	section.visionImage,section.missionImage,section.contactImage,section.cover,section.vision,section.mission{
 	  background-attachment: scroll;
 	}
-	.pageEventCover{
+	.pageEventCoverSupernatural{
 		display: inline-block;
 		min-height: 200px;
 		height: 30%;
@@ -1043,10 +1083,58 @@ section.cover{
 		  background-size:100%;
 		  background-image: url(../images/supernatural-banner.jpg);
 	}
+	.pageEventCoverMinneapolis{
+		display: inline-block;
+		min-height: 200px;
+		height: 30%;
+		min-width: 400px;
+		/*width: 20%;*/
+		width: 100%;
+		background-color: green;
+		vertical-align: top;
+		margin: 0 0 5% 0;
+		  background: no-repeat;
+		  background-attachment: fixed;
+		  background-position: top center;
+		  background-size:100%;
+		  background-image: url(../images/minneapolis-banner.jpg);
+	}
 	section#coverVerse{
 	font-size:1em;
-}
-
+	}
+	section.eventItem3colPlus{
+		width:91%;
+		margin: 0 auto;
+		display: block;
+		vertical-align: middle;
+		top: 0px;
+		background-color: white;
+	}
+	section.eventPlus{
+		/**/padding: 5%;
+		height: auto;
+		width:90%;
+		background-color: #9e1e24;
+		color: white;
+		display: block;
+		text-align: left;
+		vertical-align: middle;
+		transition: all 0.5s ease-out;
+  	 	margin: 0;
+    	position: inherit;
+	}
+	.eventPlusText{
+		position: relative;
+		width: 100%;
+	top: 40%;
+	text-align: center;
+	height: auto;
+	}
+	section.eventPlus:hover{
+		background-color: white;
+		color: red;
+		border:solid 1px #9e1e24;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -1074,7 +1162,7 @@ section.cover{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 361px) {
 	section#ruban, section.page, footer, article{
 		/*min-width: 480px;*/
 		min-width: 100%;
