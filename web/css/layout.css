@@ -646,7 +646,8 @@ section.eventPlus:hover {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/minneapolis-banner.jpg);
+    /*background-image: url(../images/stuttgart.jpg);*/
+    background-image: url(../images/healing-ministries-live-tv.jpg);
 }
 
 .thumb3 {
